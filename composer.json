@@ -1,0 +1,18 @@
+{
+  "name": "swag/theme-skeleton",
+  "description": "Theme skeleton plugin",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "ThemeDev\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "ThemeDev\\ThemeDev",
+    "label": {
+      "de-DE": "Theme ThemeDev plugin",
+      "en-GB": "Theme ThemeDev plugin"
+    }
+  }
+}

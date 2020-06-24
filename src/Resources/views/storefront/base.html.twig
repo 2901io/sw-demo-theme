@@ -1,0 +1,24 @@
+{% sw_extends '@Storefront/storefront/base.html.twig' %}
+
+{% block base_header %}
+    <header 
+        class="header-main {% if activeRoute == 'frontend.home.page' %}wae-main-header-full{% endif %}"
+        {% if activeRoute == 'frontend.home.page' %}
+            style="background-image: url({{ shopware.theme.waeHeaderBackground }});"
+        {% endif %}>
+        {% block base_header_inner %}
+            <div class="container">
+                {% sw_include '@Storefront/storefront/layout/header/header.html.twig' %}
+            </div>
+        {% endblock %}
+
+        <div class="nav-main">
+            {% block base_navigation_inner %}
+                {% sw_include '@Storefront/storefront/layout/navigation/navigation.html.twig' %}
+            {% endblock %}
+        </div>
+    </header>
+{% endblock %}
+
+{% block base_navigation %}        
+{% endblock %}

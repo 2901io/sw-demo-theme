@@ -1,0 +1,61 @@
+{
+  "name": "ThemeDev",
+  "author": "Shopware AG",
+  "views": [
+     "@Storefront",
+     "@Plugins",
+     "@ThemeDev"
+  ],
+  "style": [
+    "app/storefront/src/scss/overrides.scss",
+    "@Storefront",
+    "app/storefront/src/scss/base.scss"
+  ],
+  "script": [
+    "@Storefront",
+    "app/storefront/dist/storefront/js/theme-dev.js"
+  ],
+  "asset": [
+    "app/storefront/src/assets"
+  ],
+  "config": {
+    "blocks": {
+      "themeDev": {
+        "label": {
+          "en-GB": "Custom Theme Settings",
+          "de-DE": "Individuelle Theme Einstellungen"
+        }
+      }
+    },
+    "sections": {
+      "themeDevSection": {
+        "label": {
+          "en-GB": "themeDevSection",
+          "de-DE": "themeDevSection"
+        }
+      }
+    },
+    "fields": {
+      "waeHeaderBackground": {
+        "label": {
+          "en-GB": "Select Backgroundimage",
+          "de-DE": "Wähle ein Hintergrundbild"
+        },
+        "type": "media",
+        "editable": true,
+        "block": "themeDev",
+        "section": "themeDevSection"
+      },
+      "waeFooterBackground": {
+        "label": {
+          "en-GB": "Select Backgroundcolor",
+          "de-DE": "Wähle eine Hintergrundfarbe"
+        },
+        "type": "color",
+        "editable": true,
+        "block": "themeDev",
+        "section": "themeDevSection"
+      }
+    }
+  }
+}

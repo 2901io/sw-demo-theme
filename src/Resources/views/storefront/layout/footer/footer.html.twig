@@ -1,0 +1,23 @@
+{% sw_extends '@Storefront/storefront/layout/footer/footer.html.twig' %}
+
+{% block layout_footer_navigation_hotline %}
+{% endblock %}
+
+{% block layout_footer_navigation_columns %}
+    <div class="wae-footer">
+        <div class="wae-footer__list">
+            {% for navitem in page.footer.navigation.tree %}
+                {% if navitem.children %}
+                    <div class="alert alert-danger px-2">no subcategories allowed – please restructure your footer category tree</div>
+                {% else %}
+                <div class="wae-footer__list-item">
+                    <a class="wae-footer__list-link" href="{{ seoUrl('frontend.navigation.page', { navigationId: navitem.category.id }) }}">{{ navitem.category.name }}</a>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block layout_footer_copyright %}
+{% endblock %}

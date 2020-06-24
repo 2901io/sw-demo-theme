@@ -1,0 +1,32 @@
+// hide searchbar so it only shows when collapse is triggered
+#searchCollapse {
+    height: 0px;
+    overflow: hidden;
+}
+
+.show#searchCollapse {
+    height: auto;
+    overflow: unset;
+}
+
+// fullscreen header /w bg-image & transparent searchbar
+// unable to render header-background url to scss => $waeHeaderBackground only returns an ID ?!
+// background-image style is located in the header.html.twig as an inline style
+.header-main {
+    padding-top: 1.25rem;
+}
+
+.wae-main-header-full {
+    height: 100vh;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.header-search-input {
+    background-color: transparent !important;
+}
+
+.header-search-btn {
+    background-color: transparent !important;
+}
